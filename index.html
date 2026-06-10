@@ -1,0 +1,148 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Junnu ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+background:linear-gradient(-45deg,#ff4b91,#ff8fb1,#ffc2d1,#ff4b91);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+width:90%;
+max-width:700px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:25px;
+text-align:center;
+color:white;
+box-shadow:0 0 30px rgba(255,255,255,0.3);
+}
+
+h1{
+font-size:3rem;
+margin-bottom:15px;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.05);}
+}
+
+button{
+padding:15px 30px;
+border:none;
+border-radius:50px;
+font-size:18px;
+cursor:pointer;
+margin-top:20px;
+}
+
+#letter{
+display:none;
+margin-top:20px;
+line-height:1.8;
+font-size:18px;
+}
+
+.heart{
+position:absolute;
+bottom:-20px;
+color:white;
+font-size:20px;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>🎂 Happy Birthday Junnu ❤️</h1>
+
+<p>For My Besan Ka Laddo 💛</p>
+
+<button onclick="showLetter()">Open Surprise 🎁</button>
+
+<div id="letter">
+<p>
+Happy Birthday meri pyari Junnu ❤️
+
+Tu sirf meri friend nahi, meri sister from another mother hai.
+
+Pakistan aur India ke darmiyan distance zaroor hai, lekin hamari dosti us se bohat bari hai.
+
+Yaad rakh, kisi ke chale jane se teri value kabhi kam nahi hoti. Tu strong hai, beautiful soul hai aur tera best chapter abhi likha jana baqi hai.
+
+God tujhe hamesha khush rakhe, har buri nazar se bachaye aur teri har halal dua qubool farmaye. 🤲✨
+
+Happy Birthday meri Besan Ka Laddo! 🎂💛
+</p>
+</div>
+</div>
+
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+</audio>
+
+<script>
+
+function showLetter(){
+document.getElementById("letter").style.display="block";
+}
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
